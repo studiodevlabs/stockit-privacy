@@ -4,9 +4,9 @@
 
 ---
 
-## The Short Version
+## The Short Version 
 
-StockIt does not collect, store, transmit, or sell any of your personal data or financial information. Everything stays on your phone.
+Stock-It does not collect, store, transmit, or sell any of your personal data or financial information. Everything stays on your phone.
 
 ---
 
