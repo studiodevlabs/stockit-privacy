@@ -22,8 +22,9 @@
       padding: 20px 40px;
       border-bottom: 1px solid #1e2a3a;
     }
-    .nav-logo { font-size: 22px; font-weight: 800; color: #fff; letter-spacing: -0.5px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-size: 22px; font-weight: 800; color: #fff; letter-spacing: -0.5px; text-decoration: none; }
     .nav-logo span { color: #6366f1; }
+    .nav-logo img { width: 32px; height: 32px; border-radius: 8px; }
     .nav-links { display: flex; gap: 28px; }
     .nav-links a { color: #94a3b8; text-decoration: none; font-size: 14px; }
     .nav-links a:hover { color: #fff; }
@@ -48,6 +49,7 @@
       border-radius: 100px;
       margin-bottom: 28px;
     }
+    .hero-logo { width: 88px; height: 88px; border-radius: 22px; margin: 0 auto 28px; display: block; box-shadow: 0 8px 32px rgba(99,102,241,0.3); }
     .hero h1 {
       font-size: 52px;
       font-weight: 900;
@@ -194,7 +196,7 @@
 <body>
 
   <nav>
-    <div class="nav-logo">Stock<span>It</span></div>
+    <a class="nav-logo" href="/"><img src="icon.png" alt="StockIt" />Stock<span>It</span></a>
     <div class="nav-links">
       <a href="privacy-policy.html">Privacy Policy</a>
       <a href="terms.html">Terms of Service</a>
@@ -202,6 +204,7 @@
   </nav>
 
   <section class="hero">
+    <img src="icon.png" alt="StockIt" class="hero-logo" />
     <div class="badge">100% On-Device</div>
     <h1>Your wealth.<br /><span>Your phone.</span><br />Nobody else.</h1>
     <p>StockIt is a private portfolio tracker for Indian investors. Track stocks, mutual funds, fixed deposits, gold, and retirement — all without an account, server, or subscription.</p>
