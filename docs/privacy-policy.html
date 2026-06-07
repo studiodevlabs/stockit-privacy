@@ -1,112 +1,84 @@
-# Privacy Policy — StockIt
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — StockIt</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; color: #1a1a1a; line-height: 1.7; }
+    h1 { font-size: 28px; } h2 { font-size: 18px; margin-top: 32px; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    th, td { border: 1px solid #ddd; padding: 10px 14px; text-align: left; }
+    th { background: #f5f5f5; }
+    a { color: #4f46e5; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy — StockIt</h1>
+  <p><strong>Last updated:</strong> June 2026</p>
 
-**Last updated:** June 2026
+  <h2>The Short Version</h2>
+  <p>StockIt does not collect, store, transmit, or sell any of your personal data or financial information. Everything stays on your phone. We have no servers. We cannot see your data even if we wanted to.</p>
 
----
+  <h2>What Data StockIt Accesses</h2>
+  <h3>Data you enter yourself</h3>
+  <ul>
+    <li>Stock transactions (buy, sell, dividend)</li>
+    <li>Holdings, price overrides, portfolio notes</li>
+    <li>Fixed deposits, recurring deposits, and interest rates</li>
+    <li>Gold holdings (physical, SGB, ETF)</li>
+    <li>Mutual fund units and purchase NAV</li>
+    <li>Retirement account balances (NPS, EPF, PPF)</li>
+  </ul>
+  <p>All of this data is stored <strong>only on your device</strong>, encrypted using AES-256 with a key stored in the Android Keystore. It never leaves your device unless you explicitly choose to back it up to your own Google Drive account.</p>
 
-## The Short Version
+  <h3>Data fetched automatically</h3>
+  <ul>
+    <li><strong>Stock prices:</strong> Live prices are fetched from Yahoo Finance's public API. Only the ticker symbol (e.g., "HDFCBANK.NS") is sent — your holdings, quantities, and portfolio value are never transmitted.</li>
+    <li><strong>Mutual Fund NAV:</strong> Fetched from api.mfapi.in (AMFI's public API). Only the scheme code is sent. No personal data is transmitted.</li>
+    <li><strong>CSV import:</strong> Broker CSV files are parsed entirely on your device. Files never leave your phone.</li>
+  </ul>
 
-StockIt does not collect, store, transmit, or sell any of your personal data or financial information. Everything stays on your phone. We have no servers. We cannot see your data even if we wanted to.
+  <h2>What Data StockIt Does NOT Collect</h2>
+  <ul>
+    <li>No name, email, phone number, or identity</li>
+    <li>No device identifiers sent to any server</li>
+    <li>No location data</li>
+    <li>No analytics or usage tracking</li>
+    <li>No crash reporting that transmits data</li>
+    <li>No advertising identifiers</li>
+    <li>No portfolio holdings, quantities, or values on any server</li>
+    <li>StockIt has no servers — there is no backend to store your data on</li>
+  </ul>
 
----
+  <h2>Google Drive Backup (Optional)</h2>
+  <p>If you connect Google Drive, StockIt uploads a backup file to your own Google Drive account. This is:</p>
+  <ul>
+    <li><strong>Opt-in only</strong> — not enabled by default</li>
+    <li><strong>Encrypted</strong> — the backup is AES-256 encrypted before leaving your device</li>
+    <li><strong>Your account, your file</strong> — StockIt cannot read your backup</li>
+    <li><strong>Your control</strong> — you can delete the backup from your Drive at any time</li>
+  </ul>
+  <p>StockIt requests two Google API scopes:</p>
+  <ul>
+    <li><code>drive.file</code> — to create and update the backup file in your Drive</li>
+    <li><code>drive.metadata.readonly</code> — to check if a previous backup already exists</li>
+  </ul>
+  <p>StockIt cannot access any other files in your Google Drive.</p>
 
-## What Data StockIt Accesses
+  <h2>App Lock &amp; Biometric</h2>
+  <p>If you enable App Lock, StockIt uses Android's built-in biometric or device credential system. No biometric data is stored by StockIt.</p>
 
-### Data you enter yourself
-- Stock transactions (buy, sell, dividend)
-- Holdings, price overrides, portfolio notes
-- Fixed deposits, recurring deposits, and interest rates
-- Gold holdings (physical, SGB, ETF)
-- Mutual fund units and purchase NAV
-- Retirement account balances (NPS, EPF, PPF)
+  <h2>Third-Party Services</h2>
+  <table>
+    <tr><th>Service</th><th>Purpose</th><th>Data shared</th></tr>
+    <tr><td>Yahoo Finance</td><td>Live stock prices</td><td>Ticker symbols only</td></tr>
+    <tr><td>api.mfapi.in</td><td>Mutual fund NAV</td><td>Scheme codes only</td></tr>
+    <tr><td>Google Drive API</td><td>Optional encrypted backup</td><td>Encrypted JSON to your own Drive</td></tr>
+    <tr><td>Google OAuth</td><td>Sign in for Drive backup</td><td>Email address (used locally)</td></tr>
+  </table>
 
-All of this data is stored **only on your device**, encrypted using AES-256 with a key stored in the Android Keystore. It never leaves your device unless you explicitly choose to back it up to your own Google Drive account.
-
-### Data fetched automatically
-- **Stock prices:** Live prices are fetched from Yahoo Finance's public API. Only the ticker symbol (e.g., "HDFCBANK.NS") is sent — your holdings, quantities, and portfolio value are never transmitted.
-- **Mutual Fund NAV:** Fetched from api.mfapi.in (AMFI's public API). Only the scheme code (e.g., "120503") is sent. No personal data is transmitted.
-- **CSV import:** Broker CSV files are parsed entirely on your device using JavaScript. Files never leave your phone.
-
----
-
-## What Data StockIt Does NOT Collect
-
-- ❌ No name, email, phone number, or identity
-- ❌ No device identifiers sent to any server
-- ❌ No location data
-- ❌ No analytics or usage tracking (no Firebase, Mixpanel, or equivalent)
-- ❌ No crash reporting that transmits data (no Sentry, Crashlytics, or equivalent)
-- ❌ No advertising identifiers
-- ❌ No portfolio holdings, quantities, or values on any server
-- ❌ StockIt has no servers — there is no backend to store your data on
-
----
-
-## Google Drive Backup (Optional)
-
-If you connect Google Drive, StockIt uploads a backup file to your own Google Drive account. This is:
-- **Opt-in only** — not enabled by default
-- **Encrypted** — the backup is encrypted using AES-256 before leaving your device, tied to your Google account
-- **Your account, your file** — StockIt cannot read your backup. Only you can decrypt it by signing in with the same Google account
-- **Your control** — you can delete the backup from your Drive at any time
-
-StockIt requests two Google API scopes:
-- `drive.file` — to create and update the backup file
-- `drive.metadata.readonly` — to list your Drive folders so you can choose where to save the backup
-
-StockIt cannot access any other files in your Google Drive.
-
----
-
-## App Lock & Biometric
-
-If you enable App Lock, StockIt uses Android's built-in biometric or device credential system. No biometric data is stored by StockIt. Authentication is handled entirely by the Android operating system.
-
----
-
-## Offline Operation
-
-StockIt is designed to work fully offline. All features except live price updates work without an internet connection. Enabling airplane mode and opening the app will demonstrate that no data is transmitted during normal use.
-
----
-
-## Third-Party Services
-
-| Service | Purpose | Data shared |
-|---|---|---|
-| Yahoo Finance (query1.finance.yahoo.com) | Live stock prices | Ticker symbols only (e.g., "HDFCBANK.NS") |
-| api.mfapi.in | Mutual fund NAV | Scheme codes only (e.g., "120503") |
-| Google Drive API | Optional encrypted backup | Encrypted JSON file to your own Drive account |
-| Google OAuth | Sign in for Drive backup | Email address (used locally to derive encryption key) |
-
-No analytics, advertising, or crash reporting services are used.
-
----
-
-## Data Safety (Google Play)
-
-| Data type | Collected | Shared |
-|---|---|---|
-| Financial info | No | No |
-| Personal info | No | No |
-| Device identifiers | No | No |
-| Usage data | No | No |
-
----
-
-## Children's Privacy
-
-StockIt is not directed at children under 13. We do not knowingly collect any data from children.
-
----
-
-## Changes to This Policy
-
-If this policy changes, the updated date at the top of this page will reflect the change. Since we collect no personal data, material changes are unlikely.
-
----
-
-## Contact
-
-If you have questions about this privacy policy, contact:
-**studiodevlabs@gmail.com**
+  <h2>Contact</h2>
+  <p>Questions about this policy? Contact us at <a href="mailto:studiodevlabs@gmail.com">studiodevlabs@gmail.com</a></p>
+</body>
+</html>
